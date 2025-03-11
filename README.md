@@ -16,7 +16,7 @@ Step 1: Authenticate to Azure
 
 Login to your Azure account:
 
-```bash
+```shell
 az login
 ```
 
@@ -71,13 +71,15 @@ kubectl get nodes
 ### Step 4: Deploy the Sample Application
 
 Apply the Kubernetes manifests:
-
+```shell
 kubectl apply -f sample-app.yaml
-
+```
 Verify that the pods and services are running:
 
+```shell
 kubectl get pods
 kubectl get services
+```
 
 ### Step 5: Access the Application
 
@@ -94,7 +96,7 @@ http://<EXTERNAL_IP>
 ### Step 6: Cleanup (Optional)
 
 To destroy all deployed resources:
-```bash
+```shell
 terraform destroy -auto-approve
 ```
 ## Troubleshooting
@@ -103,7 +105,7 @@ If kubectl commands fail, check if the KUBECONFIG variable is set correctly.
 
 If the external IP is not available, wait a few minutes and re-run:
 
-```bash
+```shell
 kubectl get services
 ```
 
