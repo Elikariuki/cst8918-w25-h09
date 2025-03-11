@@ -217,6 +217,7 @@ spec:
             limits:
               cpu: 1000m
               memory: 512Mi
+              #updated resources to allow for more memory for product-service
 ---
 apiVersion: v1
 kind: Service
